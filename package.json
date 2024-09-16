@@ -1,0 +1,27 @@
+{
+  "name": "btl-fac-chat",
+  "version": "1.0.0",
+  "description": "discord chat bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac30/PRO02_Ben_Tania_Levi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac30/PRO02_Ben_Tania_Levi/issues"
+  },
+  "homepage": "https://github.com/fac30/PRO02_Ben_Tania_Levi#readme",
+  "dependencies": {
+    "discord.js": "^14.16.2",
+    "dotenv": "^16.4.5",
+    "openai": "^4.61.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.10.0"
+  }
+}
