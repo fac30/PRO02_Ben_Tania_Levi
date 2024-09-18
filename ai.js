@@ -1,26 +1,24 @@
-require('dotenv').config();
-
-const { OpenAI } = require("openai");
-
-const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY,});
-
 async function ask(prompt) {
+  const fetch = (await import('node-fetch')).default;
   try {
-    const completion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",       
-			messages: [
-        { "role": "system", "content": "You are a a jira wizard that is able to tell us all about how agile project management works and how we should manage projects" },
-        { "role": "user", "content": prompt }
-      ],
+    const response = await fetch('http://localhost:5000/generate-response', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: prompt }),  
     });
-    return completion.choices[0].message.content.trim();
+
+    const data = await response.json();
+
+    if (data.error) {
+      throw new Error(data.error); 
+    }
+
+    return data.response;  
   } catch (error) {
-    console.error('Error fetching completion:', error);
-    throw new Error('Failed to fetch response from OpenAI API');
+    console.error('Error communicating with Python backend:', error);
+    return 'Sorry, something went wrong while processing your request.';
   }
 }
 
-module.exports = {
-  ask,
-};
+module.exports = { ask };
 

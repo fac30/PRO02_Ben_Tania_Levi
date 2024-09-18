@@ -1,0 +1,20 @@
+Over the years, BTL Consulting has undertaken several full-stack projects that showcase the breadth of their expertise. Some notable projects include:
+
+1. **Project Apollo** - Client: Mercury Logistics
+   BTL Consulting was tasked with building a full-stack solution for Mercury Logistics, a leading supply chain company. The project involved developing 
+   a dynamic web platform that integrated with their existing systems to optimize shipment tracking and warehouse management.
+
+2. **Epsilon Health Portal** - Client: Epsilon Pharmaceuticals
+   Epsilon Pharmaceuticals needed a secure and scalable platform for managing patient records and doctor consultations. Ben Harrison led the project, 
+   which included developing a responsive front-end and a robust backend that met stringent security and data protection standards.
+
+3. **Fintrack Dashboard** - Client: Zenith Financial
+   Zenith Financial, a fintech startup, partnered with BTL Consulting to create a user-friendly financial dashboard that allowed users to track their 
+   investments, savings, and personal finances in real-time. Levi Thompson ensured the backend was optimized for large volumes of financial data.
+
+4. **EduConnect** - Client: Global EduTech
+   BTL Consulting was commissioned to design and implement EduConnect, a global platform for connecting educators and students in virtual classrooms. 
+   The full-stack solution featured real-time video communication, course management, and collaboration tools.
+
+Each of these projects reflects BTL Consulting's ability to deliver high-performance full-stack solutions that meet the unique demands of their clients.
+
