@@ -1,4 +1,4 @@
-const { ButtonBuilder, ButtonStyle, SlashCommandBuilder } = require('discord.js');
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -12,19 +12,20 @@ module.exports = {
 
         const mountains = new ButtonBuilder()
         .setCustomId('mountains')
-        .setLabel('choose mountains')
-        .setStyle(ButtonStyle.Success);
+        .setLabel('Mountains')
+        .setStyle(ButtonStyle.Success)
+        .setEmoji('⛰️');
 
         const ocean = new ButtonBuilder()
         .setCustomId('ocean')
-        .setLabel('choose ocean')
+        .setLabel('Ocean')
         .setStyle(ButtonStyle.Primary);
 
         const row = new ActionRowBuilder()
                 .addComponents(ocean, mountains);
 
             await interaction.reply({
-                content: `What is better?`,
+                content: `${person} What is better?`,
                 components: [row],
             });
 
