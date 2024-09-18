@@ -1,19 +1,20 @@
-const { Events, Collection } = require('discord.js');
+// that handles the InteractionCreate event in a Discord bot
+const { Events, Collection } = require('discord.js'); // Events provides predefined event names, while Collection is a collection-like data structure used to store and manage data, such as command cooldowns.
 
 module.exports = {
-    name: Events.InteractionCreate,
-    async execute(interaction) {
-        // Check if the interaction is a slash command
-        if (!interaction.isChatInputCommand()) return;
-            const command = interaction.client.commands.get(interaction.commandName);
+	name: Events.InteractionCreate, // specifies that this handler is for the 'interactionCreate' event, which is emitted whenever an interaction occurs (e.g., a command is invoked).
+	async execute(message, interaction) { // It is marked as async because it involves asynchronous operations, such as interacting with the Discord API.
+		// In this context, message is not used, and interaction represents the interaction object that triggered the event.
+		if (!interaction.isChatInputCommand()) return; //This line checks if the interaction is a chat input command (i.e., a slash command). If not, the function exits early. This ensures that only interactions that are commands are processed by this handler.
+        // Retrieves the command associated with the interaction from the commands collection of the client.
+		const command = interaction.client.commands.get(interaction.commandName);
 
 		if (!command) {
 			console.error(`No command matching ${interaction.commandName} was found.`);
 			return;
 		}
-
-		
 		/////////// COOLDOWN BLOCK
+
 		const { cooldowns } = interaction.client;
 
 		if (!cooldowns.has(command.data.name)) {
