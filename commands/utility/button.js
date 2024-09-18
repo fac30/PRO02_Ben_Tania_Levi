@@ -30,6 +30,7 @@ module.exports = {
             components: [row],
         });
 
+        // This method returns a Promise that resolves when any interaction passes its filter (if one is provided), or throws if none are received before the timeout.
         const collectorFilter = i => i.user.id === interaction.user.id;
 
         try {
