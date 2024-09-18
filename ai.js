@@ -24,11 +24,3 @@ module.exports = {
   ask,
 };
 
-// async function main() {
-//   const response = await ask("Isn't Tania Amazing?");
-//   console.log(response);
-// }
-//
-// main();
-
-// Export the ask function if you need to use it in other modules
