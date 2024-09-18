@@ -1,3 +1,4 @@
+// Linters check syntax and help you produce consistent code that follows specific style rules that you can define yourself or inherit from existing configurations
 {
     "extends": "eslint:recommended",
     "env": {
