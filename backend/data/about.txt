@@ -1,0 +1,19 @@
+BTL Consulting was founded in 2015 by Tania Rodriguez, a seasoned entrepreneur with a passion for technology-driven business solutions. 
+The company started with a vision to help businesses scale their operations by providing world-class software consulting services, particularly in 
+the areas of backend development and full-stack solutions. Tania brought in her expertise as a former CTO of a startup, combining her leadership 
+skills and vision for the future of digital transformation.
+
+Joining Tania early in the journey were Ben Harrison, a talented full-stack consultant with a knack for creating scalable and efficient applications, 
+and Levi Thompson, an expert backend developer who brought extensive experience in building complex, high-traffic systems. The trio quickly became 
+the core of the company, driving growth through their commitment to quality and innovation.
+
+BTL Consulting operates with key values that reflect the team's dedication to excellence, customer-centric solutions, and fostering a collaborative 
+environment. Their values include:
+- **Innovation**: Continuously pushing boundaries in the technology landscape to provide cutting-edge solutions.
+- **Integrity**: Building long-lasting relationships through transparency and trust.
+- **Collaboration**: Working closely with clients and partners to deliver meaningful and measurable results.
+- **Growth**: Fostering personal and professional development for both clients and employees.
+
+Today, BTL Consulting is known for its agile approach, helping businesses across various industries achieve digital transformation through software 
+consulting, development, and implementation.
+
