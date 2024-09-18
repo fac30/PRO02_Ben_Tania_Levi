@@ -11,21 +11,22 @@ module.exports = {
 
 
         const mountains = new ButtonBuilder()
-        .setCustomId('mountains')
-        .setLabel('Mountains')
-        .setStyle(ButtonStyle.Success)
-        .setEmoji('⛰️');
+            .setCustomId('mountains')
+            .setLabel('Mountains')
+            .setStyle(ButtonStyle.Success)
+            .setEmoji('⛰️');
 
         const ocean = new ButtonBuilder()
-        .setCustomId('ocean')
-        .setLabel('Ocean')
-        .setStyle(ButtonStyle.Primary);
+            .setCustomId('ocean')
+            .setLabel('Ocean')
+            .setStyle(ButtonStyle.Primary)
+            .setEmoji('🌊');
 
         const row = new ActionRowBuilder()
                 .addComponents(ocean, mountains);
 
             await interaction.reply({
-                content: `${person} What is better?`,
+                content: `${person} Which is better?`,
                 components: [row],
             });
 
