@@ -23,12 +23,27 @@ module.exports = {
             .setEmoji('🌊');
 
         const row = new ActionRowBuilder()
-                .addComponents(ocean, mountains);
+            .addComponents(ocean, mountains);
 
-            await interaction.reply({
-                content: `${person} Which is better?`,
-                components: [row],
-            });
+        const response = await interaction.reply({
+            content: `${person} Which is better?`,
+            components: [row],
+        });
+
+        const collectorFilter = i => i.user.id === interaction.user.id;
+
+        try {
+            const confirmation = await response.awaitMessageComponent({ filter: collectorFilter, time: 60_000 });
+
+            if (confirmation.customId === 'ocean') {
+                await confirmation.update({ content: "That's an amazing choice!", components: [] });
+            } else if (confirmation.customId === 'mountains') {
+                await confirmation.update({ content: 'Fantastic decision!', components: [] });
+            }
+        } catch (e) {
+            await interaction.editReply({ content: 'Confirmation not received within 1 minute, cancelling', components: [] });
+        }
+
 
     },
 };

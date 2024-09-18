@@ -11,6 +11,8 @@ module.exports = {
 			console.error(`No command matching ${interaction.commandName} was found.`);
 			return;
 		}
+
+		
 		/////////// COOLDOWN BLOCK
 		const { cooldowns } = interaction.client;
 
