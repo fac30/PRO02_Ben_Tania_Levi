@@ -15,6 +15,15 @@ module.exports = {
 		}
 		/////////// COOLDOWN BLOCK
 
+		// - This block handles the command cooldown logic.
+        // cooldowns is a Collection that tracks the cooldowns for each command.
+        //  If the command's cooldown data does not exist in cooldowns, a new Collection is created for it.
+        //  The current time is retrieved with Date.now().
+        //  The cooldown amount is calculated from the command's cooldown property (in seconds) or a default duration of 3 seconds.
+        //  If the user has already triggered the command recently, it calculates if the cooldown period has expired.
+        //  If the cooldown is still active, a reply is sent to the user indicating how long they must wait before using the command again.
+        //  If the cooldown has expired or does not exist, the user’s timestamp is updated, and a timeout is set to remove their cooldown entry after the cooldown period.
+
 		const { cooldowns } = interaction.client;
 
 		if (!cooldowns.has(command.data.name)) {
