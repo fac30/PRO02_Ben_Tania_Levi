@@ -1,4 +1,3 @@
-// The individual command file, con	taining definitions and functionality of the command.
 // SlashCommandBuilder is used to create slash commands, a type of interaction in Discord, which allows users to run bot commands by typing / followed by the command name
 const { SlashCommandBuilder } = require('discord.js');
 
@@ -6,8 +5,7 @@ const { SlashCommandBuilder } = require('discord.js');
 // This allows other parts of the bot, like the command handler, to import and use the command logic
 module.exports = {
 	// a cooldown property for the command, which sets a 5-second cooldown between uses of the command by the same user. 
-	// Cooldowns help prevent spam by limiting how frequently users can trigger the command.
-  cooldown: 5,
+    cooldown: 5,
     //This object defines the command’s basic information.
 	data: new SlashCommandBuilder()
 		.setName('ping')

@@ -5,9 +5,8 @@ module.exports = {
         .setName('button')
         .setDescription('Choose'),
     async execute(interaction) {
-  // interaction.user is the object representing the User who ran the command
-  // interaction.member is the GuildMember object, which represents the user in the specific guild
-        const person = `${interaction.user.username}`;
+        // interaction.user is the object representing the User who ran the command
+        // const person = `${interaction.user.username}`;
 
 
         const mountains = new ButtonBuilder()
@@ -26,7 +25,7 @@ module.exports = {
             .addComponents(ocean, mountains);
 
         const response = await interaction.reply({
-            content: `${person} Which is better?`,
+            content: `Which is better?`,
             components: [row],
         });
 
@@ -44,6 +43,18 @@ module.exports = {
         } catch (e) {
             await interaction.editReply({ content: 'Confirmation not received within 1 minute, cancelling', components: [] });
         }
+
+        // try {
+        //     const confirmation = await response.awaitMessageComponent({ filter: collectorFilter, time: 60_000 });
+
+        //     if (confirmation.customId === 'ocean') {
+        //         await confirmation.update({ content: "That's an amazing choice!", components: [] });
+        //     } else if (confirmation.customId === 'mountains') {
+        //         await confirmation.update({ content: 'Fantastic decision!', components: [] });
+        //     }
+        // } catch (e) {
+        //     await interaction.editReply({ content: 'Confirmation not received within 1 minute, cancelling', components: [] });
+        // }
 
 
     },
